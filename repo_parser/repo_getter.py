@@ -1,6 +1,7 @@
 import subprocess, os
 import re
-
+from ..utils.llm import call_openai
+from prompts.prompts import readme_summarization_system_prompt, readme_summarization_user_prompt
 
 def download_repo(repo_url: str, output_dir: str, depth: int = 1):
     """
